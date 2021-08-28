@@ -8,11 +8,11 @@ export default function GamesIndexPage(){
             <h1>Games Index Page</h1>
         </div>
         <div>
-            <span><Link to="/blackjack"><button>BlackJack</button></Link></span>
-            <span><Link to="/connect-four"><button>Connect 4</button></Link></span>
-            <span><Link to="/tic-tac-toe"><button>Tic-Tac-Toe</button></Link></span>
-            <span><Link to="/simon"><button>Simon</button></Link></span>
-            <span><Link to="/war"><button>War</button></Link></span>
+            <span><Link to="/blackjack"><button className="gameLink">BlackJack</button></Link></span>
+            <span><Link to="/connect-four"><button className="gameLink">Connect 4</button></Link></span>
+            <span><Link to="/tic-tac-toe"><button className="gameLink">Tic-Tac-Toe</button></Link></span>
+            <span><Link to="/simon"><button className="gameLink">Simon</button></Link></span>
+            <span><Link to="/war"><button className="gameLink">War</button></Link></span>
         </div>
     </>
     );
