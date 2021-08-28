@@ -1,14 +1,16 @@
 /* CSS Custom Properties */
 :root {
-	--background: white;
-	--card-color: #d9d9d9;
-	--button: #24b5b7;
-	--button-hover: #2a87c0;
-	--header-text: black;
-	--plain-text: black;
-	--link: black;
-  --link-visited: black;
-	--border: black;
+	--background: rgb(255, 255, 255);
+	--background-form: rgba(0, 75, 150, 0.2);
+	--background-title: rgba(0, 75, 150, 0.2);
+	--background-card: rgb(220, 220, 230);
+	--button: rgba(50, 200, 210, 0.9);
+	--button-hover: rgba(50, 130, 210, 0.8);
+	--header-text: rgb(0, 0, 0);
+	--plain-text: rgb(0, 0, 0);
+	--link: rgb(50, 0, 100);
+  --link-visited: rgb(100, 0 50);
+	--border: rgb(0, 0, 0);
   
 	--background-2: #292929;
 	--card-color-2: #525252;
@@ -82,7 +84,7 @@ code {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--background);
+  background-color: var(--background-title);
   color: var(--plain-text);
   border: .1vmin solid var(--border);
   border-radius: 1vmin;
@@ -93,7 +95,7 @@ code {
 
 .form-container {
   padding: 3vmin;
-  background-color: var(--background);
+  background-color: var(--background-form);
   border: .1vmin solid var(--border);
   border-radius: 1vmin;
 }
@@ -167,4 +169,12 @@ button[type="submit"] {
 
 button:hover {
 	background-color: var(--button-hover);
+}
+
+a {
+  color: var(--link);
+}
+
+a:visited {
+  color: var(--link-visited);
 }

@@ -20,7 +20,7 @@ export default function AboutPage(){
                     <tr>
                         <td>Zach Oandasan</td>
                         <td>Blackjack</td>
-                        <td><a herf="">Link</a></td>
+                        <td><a href="">Link</a></td>
                     </tr>
                 </tbody>
             </table>
