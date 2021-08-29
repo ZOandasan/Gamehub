@@ -1,9 +1,21 @@
-### To Use This:
+# Aleph Naught Game Hub (Name Subject to Change)
 
-1) Clone the mern-infrastructure repo.
-2) Rename the newly mern-infrastructure folder to the name of your new project.
-3) Optionally, update the "name": "mern-infrastructure" in package.json.
-4) Create a new repo on your personal GH account.
-5) Copy the GH repo's URL.
-6) Update the remote's URL: git remote set-url origin <paste the copied url>
-7) Push for the first time: git push -u origin main
+### Site Functionality
+
+### Link to Deployed Site:
+
+### Technologies Used:
+HTML, CSS, Javascript, MongoDB, Mongoose, Express, React.js, Node.js, Heroku, Github
+
+### Trello Board:
+https://trello.com/b/gt4rCqly/group-game-hub
+
+### Next Steps:
+<ul>
+    <li>Make it Work.</li>
+</ul>
+
+### ERD:
+
+### Screenshots:
+
