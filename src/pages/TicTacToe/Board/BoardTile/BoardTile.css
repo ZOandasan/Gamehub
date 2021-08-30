@@ -1,23 +1,29 @@
-button.player-one {
+button.player-one-tile, button.player-two-tile, button.disabled-tile, button.enabled-tile {
+    border-radius: 50%;
+    height: 15vmin;
+    width: 15vmin;
+}
+
+button.player-one-tile {
     background-color: rgba(205, 0, 50, 1);
     color: black;
     cursor: not-allowed;
 }
   
-button.player-one:hover {
+button.player-one-tile:hover {
     background-color: rgba(125, 0, 25, 1);
 }
   
-button.player-two {
+button.player-two-tile {
     background-color: rgba(50, 0, 205, 1);
     color: black;
     cursor: not-allowed;
 }
   
-button.player-two:hover {
+button.player-two-tile:hover {
     background-color: rgba(25, 0, 125, 1);
 }
   
-button.disabled {
+button.disabled-tile {
     cursor: not-allowed;
 } 
