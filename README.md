@@ -53,7 +53,7 @@ Contributions are what make the open source community such an amazing place to b
 
 ## License
 
-Distributed under the MIT License. See [LICENSE](https://github.com/ZOandasan/Gamehub/LICENSE.md) for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/ZOandasan/Gamehub/blob/master/LICENSE.md) for more information.
 
 ## Authors
 
