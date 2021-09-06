@@ -339,7 +339,7 @@ export default function ConnectFourBoard() {
   return (
     <div>
       <div
-        className={`board ${
+        className={`connectFourBoard ${
           currentPlayer === boardSettings.colors.p1 ? "p1-turn" : "p2-turn"
         } `}
         ref={domBoard}

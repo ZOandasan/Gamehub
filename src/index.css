@@ -1,11 +1,11 @@
 /* CSS Custom Properties */
 :root {
-	--background: rgb(255, 255, 255);
+	--background: rgb(254, 251, 243);
 	--background-form: rgba(0, 75, 150, 0.2);
 	--background-title: rgba(0, 75, 150, 0.2);
 	--background-card: rgb(220, 220, 230);
-	--button: rgba(50, 200, 210, 0.9);
-	--button-hover: rgba(50, 130, 210, 0.8);
+	--button: rgba(50, 200, 210, 0.8);
+	--button-hover: rgba(50, 200, 210);
 	--header-text: rgb(0, 0, 0);
 	--plain-text: rgb(0, 0, 0);
 	--link: rgb(50, 0, 100);
