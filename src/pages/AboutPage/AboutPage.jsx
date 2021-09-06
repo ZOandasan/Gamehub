@@ -20,6 +20,21 @@ export default function AboutPage(){
                     <tr>
                         <td>Zach Oandasan</td>
                         <td>Blackjack</td>
+                        <td><a href="https://www.linkedin.com/in/zachary-oandasan/">Link</a></td>
+                    </tr>
+                    <tr>
+                        <td>Chris Burwell</td>
+                        <td>Connect-Four</td>
+                        <td><a href="https://www.linkedin.com/in/crburwell/">Link</a></td>
+                    </tr>
+                    <tr>
+                        <td>Jeremy Young-Hotz</td>
+                        <td>Connect-Four</td>
+                        <td><a href="https://www.linkedin.com/in/jeremyyoung-hotz/">Link</a></td>
+                    </tr>
+                    <tr>
+                        <td>Andy Li</td>
+                        <td>Connect-Four</td>
                         <td><a href="">Link</a></td>
                     </tr>
                 </tbody>
