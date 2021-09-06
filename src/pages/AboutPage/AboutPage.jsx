@@ -18,13 +18,13 @@ export default function AboutPage(){
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Zach Oandasan</td>
-                        <td>Blackjack</td>
+                        <td>Zachary Oandasan</td>
+                        <td>Blackjack, Tic-Tac-Toe, Jotto</td>
                         <td><a href="https://www.linkedin.com/in/zachary-oandasan/">Link</a></td>
                     </tr>
                     <tr>
-                        <td>Chris Burwell</td>
-                        <td>Connect-Four</td>
+                        <td>Christopher Burwell</td>
+                        <td>Connect-Four, Jotto</td>
                         <td><a href="https://www.linkedin.com/in/crburwell/">Link</a></td>
                     </tr>
                     <tr>
@@ -34,8 +34,18 @@ export default function AboutPage(){
                     </tr>
                     <tr>
                         <td>Andy Li</td>
-                        <td>Connect-Four</td>
-                        <td><a href="">Link</a></td>
+                        <td>Blackjack</td>
+                        <td><a href="https://www.linkedin.com/in/andy-jia-li/">Link</a></td>
+                    </tr>
+                    <tr>
+                        <td>William Stull</td>
+                        <td>Simon</td>
+                        <td><a href="https://www.linkedin.com/in/wsii/">Link</a></td>
+                    </tr>
+                    <tr>
+                        <td>Liam Messick</td>
+                        <td>Jotto</td>
+                        <td><a href="https://www.linkedin.com/in/william-messick-a4956721a/">Link</a></td>
                     </tr>
                 </tbody>
             </table>
