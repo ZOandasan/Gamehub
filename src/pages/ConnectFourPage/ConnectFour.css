@@ -1,0 +1,64 @@
+.ConnectFourApp {
+  font-family: sans-serif;
+  text-align: center;
+  /* background-image: url("https://i.imgur.com/duzgAfq.jpeg"); */
+  background-size: cover;
+  justify-content: center;
+}
+.ConnectFour {
+  display: flex;
+  background-color: aqua;
+  justify-content: center;
+}
+
+.board {
+  margin: auto;
+  display: grid;
+  justify-content: stretch;
+  max-width: 500px;
+  height: 450px;
+}
+.drop-button {
+  background-color: black;
+}
+
+.cell {
+  width: 100%;
+}
+
+img {
+  height: 20vmin;
+  width: 60vmin;
+}
+
+.infoDisplay {
+  /* background-color: #000; */
+  display: flex;
+  justify-content: space-between;
+  font-size: 4vh;
+  margin: 1vh;
+  margin-right: 10%;
+  margin-left: 10%;
+  color: black;
+}
+
+.redScore {
+  color: #bb2222;
+}
+
+.scoreBreak {
+  color: #7fc3ff;
+}
+.winButton {
+  cursor: default;
+  display: inline-block;
+  margin: 4px;
+  padding: 4px 16px;
+  user-select: none;
+  text-decoration: none;
+
+  border: 1px solid #000;
+  /* border-image: url("/public/images/macos6-outset.svg") 64/2px; */
+  border-radius: 3px;
+  background: #fff;
+}
