@@ -11,7 +11,7 @@
   justify-content: center;
 }
 
-.board {
+.connectFourBoard {
   margin: auto;
   display: grid;
   justify-content: stretch;

@@ -1,5 +1,5 @@
 button.player-one-tile, button.player-two-tile, button.disabled-tile, button.enabled-tile {
-    border-radius: 50%;
+    /* border-radius: 50%; */
     height: 15vmin;
     width: 15vmin;
 }
