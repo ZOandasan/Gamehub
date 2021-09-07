@@ -10,6 +10,7 @@ import NavBar from '../../components/NavBar/NavBar';
 
 import Blackjack from '../BlackJack/BlackJack';
 import ConnectFourPage from '../ConnectFourPage/ConnectFourPage';
+import Jotto from '../Jotto/Jotto';
 import Simon from '../Simon/Simon';
 import TicTacToe from '../TicTacToe/TicTacToe';
 import War from '../War/War';
@@ -37,6 +38,9 @@ export default function App() {
             </Route>
             <Route path="/connect-four">
               <ConnectFourPage />
+            </Route>
+            <Route path="/jotto">
+              <Jotto />
             </Route>
             <Route path="/simon">
               <Simon />
