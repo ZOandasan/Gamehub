@@ -7,24 +7,39 @@ const boardSettings = {
   dropAnimationRate: 50,
   flashAnimationRate: 600,
   colors: {
-    empty: "#7fc3ff",
+    empty: "#cfe9ff",
     // above is light-blue
     p1: "#BB2222",
     // above is red
-    p2: "#000000"
-    // above is black
-  }
+    p2: "#1283e5",
+    // above is blue
+  },
 };
 
 const winTypes = {
   vertical: 0,
   horizontal: 1,
   forwardsDiagonal: 2,
-  backwardsDiagonal: 3
+  backwardsDiagonal: 3,
 };
 
 let redScore = 0,
-  blackScore = 0;
+  blueScore = 0;
+
+let turnsTaken = 0;
+const maxTurns = 42;
+
+function findTie() {
+  if (turnsTaken === maxTurns) {
+//at this exact moment I need to render a message that says "It's a tie!" and the reset button
+
+    console.log("Tie found");
+    turnsTaken = 0;
+    return true;
+  } else {
+  return false}
+}
+      
 
 export default function ConnectFourBoard() {
   const [board, setBoard] = useState(createBoard());
@@ -50,7 +65,7 @@ export default function ConnectFourBoard() {
     const column = Math.floor(index % boardSettings.columns);
     return {
       row,
-      column
+      column,
     };
   }
 
@@ -65,6 +80,8 @@ export default function ConnectFourBoard() {
   }
 
   function restartGame() {
+    //find tie on restart to return false
+    findTie();
     getScore();
     setCurrentPlayer(getFirstPlayerTurn());
     setWin(null);
@@ -75,10 +92,15 @@ export default function ConnectFourBoard() {
     console.log("Getting Score:");
     console.log(win);
 
-    if (win.winner === "#BB2222") {
-      redScore++;
-    } else if (win.winner === "#000000") {
-      blackScore++;
+    if (!win) {
+      console.log("No win");
+      return;
+    } else {
+      if (win.winner === "#BB2222") {
+        redScore++;
+      } else if (win.winner === "#1283e5") {
+        blueScore++;
+      }
     }
   }
 
@@ -101,6 +123,8 @@ export default function ConnectFourBoard() {
   }
 
   async function handleDrop(column) {
+    
+
     if (dropping || win) return;
     const row = findFirstEmptyRow(column);
     if (row < 0) return;
@@ -110,6 +134,12 @@ export default function ConnectFourBoard() {
     const newBoard = board.slice();
     newBoard[getIndex(row, column)] = currentPlayer;
     setBoard(newBoard);
+
+    turnsTaken++;
+    console.log("Turns Taken: " + turnsTaken);
+    if (findTie()) {
+      return;
+    }
 
     setCurrentPlayer(
       currentPlayer === boardSettings.colors.p1
@@ -193,7 +223,7 @@ export default function ConnectFourBoard() {
     function createWinState(start, winType) {
       const win = {
         winner: board[start],
-        winningCells: []
+        winningCells: [],
       };
 
       let pos = getRowAndColumn(start);
@@ -306,7 +336,7 @@ export default function ConnectFourBoard() {
           className="cell drop-button"
           onClick={() => handleDrop(i)}
           style={{
-            backgroundColor: currentPlayer
+            backgroundColor: currentPlayer,
           }}
         />
       );
@@ -319,7 +349,7 @@ export default function ConnectFourBoard() {
       key={"c" + i}
       className="cell board-block"
       style={{
-        backgroundColor: c
+        backgroundColor: c,
       }}
     />
   ));
@@ -332,10 +362,6 @@ export default function ConnectFourBoard() {
     return gridTemplateColumns;
   }
 
-  // if (win) {
-  //   redScore++;
-  // }
-
   return (
     <div>
       <div
@@ -344,7 +370,7 @@ export default function ConnectFourBoard() {
         } `}
         ref={domBoard}
         style={{
-          gridTemplateColumns: getGridTemplateColumns()
+          gridTemplateColumns: getGridTemplateColumns(),
         }}
       >
         {createDropButtons()}
@@ -356,12 +382,12 @@ export default function ConnectFourBoard() {
           <span>
             <span className="redScore"> {redScore} </span>
             <span className="scoreBreak">:</span>
-            <span className="blackScore"> {blackScore} </span>
+            <span className="blueScore"> {blueScore} </span>
           </span>
           <span style={{ color: currentPlayer }}>
             {currentPlayer === boardSettings.colors.p1
               ? "RED's Turn"
-              : "BLACK's Turn"}
+              : "BLUE's Turn"}
           </span>
         </span>
       )}
@@ -372,7 +398,7 @@ export default function ConnectFourBoard() {
           {/* <p>Winner winner chicken dinner</p> */}
           <h1 style={{ color: win.winner }}>
             {" "}
-            {win.winner === boardSettings.colors.p1 ? "RED" : "BLACK"} WON!
+            {win.winner === boardSettings.colors.p1 ? "RED" : "BLUE"} WON!
           </h1>
           <button className="winButton" onClick={restartGame}>
             Play Again
@@ -382,6 +408,21 @@ export default function ConnectFourBoard() {
           <br />
         </>
       )}
+
+      {/* {findTie && (
+        <>
+          <h1>
+            Tie Game!
+          </h1>
+          <button className="winButton" onClick={restartGame}>
+            Play Again
+          </button>
+
+          <br />
+          <br />
+        </>
+      )} */}
+
     </div>
   );
 }
