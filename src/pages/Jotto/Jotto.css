@@ -1,3 +1,29 @@
+.inputWordDiv {
+    display: flex;
+    justify-content: center;
+    /* background-color: #f5f5f5; */
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .inputWordForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .inputWordForm input {
+    text-align: center;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #f5f5f5;
+  }
 jotto-game {
     color: var(--plain-text);
 }
