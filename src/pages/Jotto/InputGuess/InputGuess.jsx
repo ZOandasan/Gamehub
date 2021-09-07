@@ -33,13 +33,15 @@ export default function InputGuess({
   }
 
   return (
-    <form autoComplete="off" onSubmit={handleSubmit}>
-      <input
-        className="inputGuess"
-        placeholder="New 5 letter Word"
-        value={formData}
-        onChange={handleChange}
-      ></input>
-    </form>
+    <div className="input-word">
+      <form autoComplete="off" onSubmit={handleSubmit}>
+        <input
+          className="inputGuess"
+          placeholder="New 5 letter Word"
+          value={formData}
+          onChange={handleChange}
+        ></input>
+      </form>
+    </div>
   );
 }

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import './Letter.css';
 
 export default function Letter({ Letter, Play }) {
   let upper = Letter.toUpperCase();
-  let bgColorList = ["lightgray", "lightblue", "salmon"];
+  let bgColorList = ["lightgray", "lightgreen", "salmon"];
   const [color, setColor] = useState(0);
 
   const handleClick = () => {
