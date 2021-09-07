@@ -1,5 +1,4 @@
 import BoardTile from "./BoardTile/BoardTile";
-import './Board.css'
 
 export default function Board({
     board,
