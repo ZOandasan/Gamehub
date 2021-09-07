@@ -57,6 +57,6 @@ Distributed under the MIT License. See [LICENSE](https://github.com/ZOandasan/Ga
 
 ## Authors
 
-* **Zack** - [Zack](https://github.com/ZOandasan/) - *Built Framework / Jotto / Tic-Tac-Toe / Blackjack*
+* **Zach** - [Zach](https://github.com/ZOandasan/) - *Built Framework / Jotto / Tic-Tac-Toe / Blackjack*
 * **Chris** - [Chris](https://github.com/countchrisdo/) - *Styling / Connect Four*
 * **Jeremy**  - [Jeremy](https://github.com/jhotz2112/) - *Connect Four*
