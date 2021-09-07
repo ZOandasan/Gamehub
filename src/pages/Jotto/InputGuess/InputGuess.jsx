@@ -1,4 +1,6 @@
 import { useState } from "react";
+import "../Jotto.css"
+
 export default function InputGuess({
   secret,
   setPlay,
@@ -33,10 +35,10 @@ export default function InputGuess({
   }
 
   return (
-    <div className="input-word">
-      <form autoComplete="off" onSubmit={handleSubmit}>
+    <div className="inputWordDiv">
+      <form className="inputWordForm" autoComplete="off" onSubmit={handleSubmit}>
         <input
-          className="inputGuess"
+          className="guessInput"
           placeholder="New 5 letter Word"
           value={formData}
           onChange={handleChange}
