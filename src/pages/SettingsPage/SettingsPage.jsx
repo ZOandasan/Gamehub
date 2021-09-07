@@ -1,38 +1,37 @@
 export default function SettingsPage(){
 
     function setLight(){
-        document.documentElement.style.setProperty('--text-color', 'black');
-        document.documentElement.style.setProperty('--background-1', 'rgb(155, 200, 155)');
-        document.documentElement.style.setProperty('--background-2', 'rgb(110, 250, 110)');
-        document.documentElement.style.setProperty('--background-3', 'rgb(160, 250, 160)');
-        document.documentElement.style.setProperty('--background-4', 'rgb(255, 255, 255)');
-        document.documentElement.style.setProperty('--button-color:', 'rgb(130, 240, 130)');
-        document.documentElement.style.setProperty('--button-hover-color', 'rgb(20, 120, 20)');
-        document.documentElement.style.setProperty('--dis-button-color:', 'rgb(240, 20, 20)');
-        document.documentElement.style.setProperty('--dis-button-hover-color', 'rgb(180, 30, 30)');
-        document.documentElement.style.setProperty('--link-color:', 'black');
-        document.documentElement.style.setProperty('--link-color-visited', 'rgb(0, 50, 0)');
+        document.documentElement.style.setProperty('--background', 'rgb(254, 251, 243)');
+        document.documentElement.style.setProperty('--background-form', 'rgba(0, 75, 150, 0.2)');
+        document.documentElement.style.setProperty('--background-title', 'rgba(0, 75, 150, 0.2)');
+        document.documentElement.style.setProperty('--background-card', 'rgb(220, 220, 230)');
+        document.documentElement.style.setProperty('--button', 'rgba(50, 200, 210, 0.8)');
+        document.documentElement.style.setProperty('--button-hover', 'rgba(50, 200, 210)');
+        document.documentElement.style.setProperty('--header-text', 'rgb(0, 0, 0)');
+        document.documentElement.style.setProperty('--plain-text', 'rgb(0, 0, 0)');
+        document.documentElement.style.setProperty('--link', 'rgb(50, 0, 100)');
+        document.documentElement.style.setProperty('--link-visited', 'rgb(100, 0, 50)');
+        document.documentElement.style.setProperty('--border', 'rgb(0, 0, 0)');
     }
 
     function setDark(){
-        document.documentElement.style.setProperty('--text-color', 'white');
-        document.documentElement.style.setProperty('--background-1', 'rgb(20, 20, 30)');
-        document.documentElement.style.setProperty('--background-2', 'rgb(30, 30, 40)');
-        document.documentElement.style.setProperty('--background-3', 'rgb(40, 40, 50)');
-        document.documentElement.style.setProperty('--background-4', 'rgb(80, 80, 100)');
-        document.documentElement.style.setProperty('--button-color:', 'rgb(20, 120, 20)');
-        document.documentElement.style.setProperty('--button-hover-color', 'rgb(30, 80, 30)');
-        document.documentElement.style.setProperty('--dis-button-color:', 'rgb(180, 30, 30)');
-        document.documentElement.style.setProperty('--dis-button-hover-color', 'rgb(120, 20, 20)');
-        document.documentElement.style.setProperty('--link-color:', 'rgb(50, 250, 50)');
-        document.documentElement.style.setProperty('--link-color-visited', 'rgb(150, 250, 50)');
+        document.documentElement.style.setProperty('--background', '#292929');
+        document.documentElement.style.setProperty('--background-form', '#3145b8');
+        document.documentElement.style.setProperty('--background-title', '#3145b8');
+        document.documentElement.style.setProperty('--background-card', '#525252');
+        document.documentElement.style.setProperty('--button', '#6175b8');
+        document.documentElement.style.setProperty('--button-hover', '#5badae');
+        document.documentElement.style.setProperty('--header-text', 'rgb(240, 240, 240)');
+        document.documentElement.style.setProperty('--plain-text', 'rgb(240, 240, 240)');
+        document.documentElement.style.setProperty('--link', 'rgb(200, 250, 150)');
+        document.documentElement.style.setProperty('--link-visited', 'rgb(150, 250, 200)');
+        document.documentElement.style.setProperty('--border', 'rgb(250, 250, 250)');
     }
 
 
     return (
     <div>
         <h1>Settings Page</h1>
-@@ -16,10 +46,11 @@ export default function SettingsPage(){
         <div>
             <h3>Color Theme</h3>
             <div>
@@ -45,3 +44,5 @@ export default function SettingsPage(){
             </div>
         </div>
     </div>
+    );
+}
