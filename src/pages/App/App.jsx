@@ -14,6 +14,7 @@ import Jotto from '../Jotto/Jotto';
 import Simon from '../Simon/Simon';
 import TicTacToe from '../TicTacToe/TicTacToe';
 import War from '../War/War';
+import Hangman from '../Hangman/Hangman';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -38,6 +39,9 @@ export default function App() {
             </Route>
             <Route path="/connect-four">
               <ConnectFourPage />
+            </Route>
+            <Route path="/hangman">
+              <Hangman />
             </Route>
             <Route path="/jotto">
               <Jotto />
