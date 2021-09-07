@@ -1,4 +1,4 @@
-import "./styles.css";
+
 import { useState } from "react";
 import Words from "./Words/Words";
 import Alphabet from "./Alphabet/Alphabet";
