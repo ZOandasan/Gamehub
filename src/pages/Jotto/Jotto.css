@@ -22,12 +22,7 @@
     padding: 10px;
     font-size: 20px;
     font-weight: bold;
-    background-color: #f5f5f5;
+    background-color: var(--background-form);
   }
-jotto-game {
-    color: var(--plain-text);
-}
 
-jotto-game > h1 {
-    color: var(--plain-text);
-}
+
