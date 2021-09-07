@@ -11,17 +11,6 @@
 	--link: rgb(50, 0, 100);
   --link-visited: rgb(100, 0 50);
 	--border: rgb(0, 0, 0);
-  
-  
-	--background-2: #292929;
-	--card-color-2: #525252;
-	--button-dark-2: #6175b8;
-	--button-light-2: #5badae;
-	--header-2: white;
-	--text-color-2: white;
-	--text-color-visited-2: white;
-	--border-2: white;
-
 	--error: red;
 }
 
@@ -126,6 +115,14 @@ input {
   color: var(--plain-text);
   background-image: none !important; /* prevent lastpass */
   outline: none;
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--header-text);
+}
+
+p, span, div {
+  color: var(--plain-text);
 }
 
 input:focus {

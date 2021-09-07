@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './InputGuess.css';
 export default function InputGuess({
   secret,
   setPlay,
@@ -36,7 +37,7 @@ export default function InputGuess({
     <div className="input-word">
       <form autoComplete="off" onSubmit={handleSubmit}>
         <input
-          className="inputGuess"
+          className="input-guess"
           placeholder="New 5 letter Word"
           value={formData}
           onChange={handleChange}

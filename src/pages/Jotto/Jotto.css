@@ -1,0 +1,7 @@
+jotto-game {
+    color: var(--plain-text);
+}
+
+jotto-game > h1 {
+    color: var(--plain-text);
+}
