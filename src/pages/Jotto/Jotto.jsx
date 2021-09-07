@@ -39,7 +39,7 @@ export default function Jotto() {
     );
   } else {
     return (
-      <div>
+      <div className="jotto-game">
         <h1>Jotto</h1>
         {/* hide h4 during release */}
         {/* <h4 className="debug"> Debug Mode - Showing Secret: {secret}</h4> */}

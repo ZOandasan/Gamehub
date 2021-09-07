@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .inputWordDiv {
     display: flex;
     justify-content: center;
@@ -24,3 +25,12 @@
     font-weight: bold;
     background-color: #f5f5f5;
   }
+=======
+jotto-game {
+    color: var(--plain-text);
+}
+
+jotto-game > h1 {
+    color: var(--plain-text);
+}
+>>>>>>> a8af0d309f6896cdfeb154d5eca31289988527a7

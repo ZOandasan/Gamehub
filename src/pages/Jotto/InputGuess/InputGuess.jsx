@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../Jotto.css"
 
+import './InputGuess.css';
 export default function InputGuess({
   secret,
   setPlay,
