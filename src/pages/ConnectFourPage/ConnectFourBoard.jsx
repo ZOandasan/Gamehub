@@ -29,31 +29,22 @@ let redScore = 0,
 let turnsTaken = 0;
 const maxTurns = 42;
 
-function findTie() {
-  
-  if (turnsTaken === maxTurns) {
-//at this exact moment I need to render a message that says "It's a tie!" and the reset button
 
-    console.log("Tie found");
-    turnsTaken = 0;
-    return true;
-  } else {
-  return false}
-}
       
 
 export default function ConnectFourBoard() {
   const [board, setBoard] = useState(createBoard());
   const [currentPlayer, setCurrentPlayer] = useState(getFirstPlayerTurn());
   const [win, setWin] = useState(null);
+  const [tie, setTie] = useState(null);
   const [flashTimer, setFlashTimer] = useState(null);
   const [dropping, setDropping] = useState(false);
   const domBoard = useRef(null);
 
 
-  useEffect(() => {
-    findTie();
-      }, []);    
+  // useEffect(() => {
+  //   findTie();
+  //     }, []);    
 
   /**
    * Helper function to get the index in the board using row and column.
@@ -144,7 +135,7 @@ export default function ConnectFourBoard() {
     turnsTaken++;
     console.log("Turns Taken: " + turnsTaken);
     if (findTie()) {
-      return;
+      setTie(true);
     }
 
     setCurrentPlayer(
@@ -215,6 +206,16 @@ export default function ConnectFourBoard() {
    */
   useEffect(() => {
     if (dropping || win) return;
+
+    function findTie() {
+      if (turnsTaken === maxTurns) {
+    //at this exact moment I need to render a message that says "It's a tie!" and the reset button
+        turnsTaken = 0;
+        console.log("Tie found");
+        return tie = true;
+      } else {
+      return false}
+    }
 
     function isWin() {
       return (
@@ -331,7 +332,7 @@ export default function ConnectFourBoard() {
       }
     }
     setWin(isWin());
-  }, [board, dropping, win]);
+  }, [board, dropping, win, tie]);
 
   function createDropButtons() {
     const btns = [];
@@ -382,6 +383,7 @@ export default function ConnectFourBoard() {
         {createDropButtons()}
         {cells}
       </div>
+
       {/* if win is null do this */}
       {!win && (
         <span className="infoDisplay">
@@ -415,7 +417,9 @@ export default function ConnectFourBoard() {
         </>
       )}
 
-      {/* {findTie && (
+      {/* If find tie is true then render */}
+
+      {tie && (
         <>
           <h1>
             Tie Game!
@@ -427,7 +431,7 @@ export default function ConnectFourBoard() {
           <br />
           <br />
         </>
-      )} */}
+      )}
 
     </div>
   );
