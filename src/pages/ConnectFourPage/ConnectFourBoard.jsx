@@ -29,22 +29,11 @@ let redScore = 0,
 let turnsTaken = 0;
 const maxTurns = 42;
 
-function findTie() {
-  if (turnsTaken === maxTurns) {
-//at this exact moment I need to render a message that says "It's a tie!" and the reset button
-
-    console.log("Tie found");
-    turnsTaken = 0;
-    return true;
-  } else {
-  return false}
-}
-      
-
 export default function ConnectFourBoard() {
   const [board, setBoard] = useState(createBoard());
   const [currentPlayer, setCurrentPlayer] = useState(getFirstPlayerTurn());
   const [win, setWin] = useState(null);
+  const [tie, setTie] = useState(null);
   const [flashTimer, setFlashTimer] = useState(null);
   const [dropping, setDropping] = useState(false);
   const domBoard = useRef(null);
@@ -80,8 +69,8 @@ export default function ConnectFourBoard() {
   }
 
   function restartGame() {
-    //find tie on restart to return false
-    findTie();
+    setTie(null);
+    turnsTaken = 0;
     getScore();
     setCurrentPlayer(getFirstPlayerTurn());
     setWin(null);
@@ -123,8 +112,6 @@ export default function ConnectFourBoard() {
   }
 
   async function handleDrop(column) {
-    
-
     if (dropping || win) return;
     const row = findFirstEmptyRow(column);
     if (row < 0) return;
@@ -137,9 +124,6 @@ export default function ConnectFourBoard() {
 
     turnsTaken++;
     console.log("Turns Taken: " + turnsTaken);
-    if (findTie()) {
-      return;
-    }
 
     setCurrentPlayer(
       currentPlayer === boardSettings.colors.p1
@@ -209,6 +193,17 @@ export default function ConnectFourBoard() {
    */
   useEffect(() => {
     if (dropping || win) return;
+
+    function findTie() {
+      if (turnsTaken === maxTurns) {
+        //at this exact moment I need to render a message that says "It's a tie!" and the reset button
+        turnsTaken = 0;
+        console.log("Tie found");
+        return true;
+      } else {
+        return false;
+      }
+    }
 
     function isWin() {
       return (
@@ -325,7 +320,10 @@ export default function ConnectFourBoard() {
       }
     }
     setWin(isWin());
-  }, [board, dropping, win]);
+    if (findTie()) {
+      setTie(true);
+    }
+  }, [board, dropping, win, tie]);
 
   function createDropButtons() {
     const btns = [];
@@ -376,6 +374,7 @@ export default function ConnectFourBoard() {
         {createDropButtons()}
         {cells}
       </div>
+
       {/* if win is null do this */}
       {!win && (
         <span className="infoDisplay">
@@ -409,11 +408,11 @@ export default function ConnectFourBoard() {
         </>
       )}
 
-      {/* {findTie && (
+      {/* If find tie is true then render */}
+
+      {tie && (
         <>
-          <h1>
-            Tie Game!
-          </h1>
+          <h1>Tie Game!</h1>
           <button className="winButton" onClick={restartGame}>
             Play Again
           </button>
@@ -421,8 +420,7 @@ export default function ConnectFourBoard() {
           <br />
           <br />
         </>
-      )} */}
-
+      )}
     </div>
   );
 }
