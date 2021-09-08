@@ -30,6 +30,7 @@ let turnsTaken = 0;
 const maxTurns = 42;
 
 function findTie() {
+  
   if (turnsTaken === maxTurns) {
 //at this exact moment I need to render a message that says "It's a tie!" and the reset button
 
@@ -48,6 +49,11 @@ export default function ConnectFourBoard() {
   const [flashTimer, setFlashTimer] = useState(null);
   const [dropping, setDropping] = useState(false);
   const domBoard = useRef(null);
+
+
+  useEffect(() => {
+    findTie();
+      }, []);    
 
   /**
    * Helper function to get the index in the board using row and column.
