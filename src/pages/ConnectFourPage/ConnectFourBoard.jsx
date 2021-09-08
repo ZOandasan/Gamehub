@@ -29,9 +29,6 @@ let redScore = 0,
 let turnsTaken = 0;
 const maxTurns = 42;
 
-
-      
-
 export default function ConnectFourBoard() {
   const [board, setBoard] = useState(createBoard());
   const [currentPlayer, setCurrentPlayer] = useState(getFirstPlayerTurn());
@@ -40,11 +37,6 @@ export default function ConnectFourBoard() {
   const [flashTimer, setFlashTimer] = useState(null);
   const [dropping, setDropping] = useState(false);
   const domBoard = useRef(null);
-
-
-  // useEffect(() => {
-  //   findTie();
-  //     }, []);    
 
   /**
    * Helper function to get the index in the board using row and column.
@@ -77,8 +69,7 @@ export default function ConnectFourBoard() {
   }
 
   function restartGame() {
-    //find tie on restart to return false
-    findTie();
+    setTie(null);
     getScore();
     setCurrentPlayer(getFirstPlayerTurn());
     setWin(null);
@@ -120,8 +111,6 @@ export default function ConnectFourBoard() {
   }
 
   async function handleDrop(column) {
-    
-
     if (dropping || win) return;
     const row = findFirstEmptyRow(column);
     if (row < 0) return;
@@ -134,9 +123,6 @@ export default function ConnectFourBoard() {
 
     turnsTaken++;
     console.log("Turns Taken: " + turnsTaken);
-    if (findTie()) {
-      setTie(true);
-    }
 
     setCurrentPlayer(
       currentPlayer === boardSettings.colors.p1
@@ -209,12 +195,13 @@ export default function ConnectFourBoard() {
 
     function findTie() {
       if (turnsTaken === maxTurns) {
-    //at this exact moment I need to render a message that says "It's a tie!" and the reset button
-        turnsTaken = 0;
+        //at this exact moment I need to render a message that says "It's a tie!" and the reset button
+        turnsTaken = 40;
         console.log("Tie found");
-        return tie = true;
+        return true;
       } else {
-      return false}
+        return false;
+      }
     }
 
     function isWin() {
@@ -332,6 +319,9 @@ export default function ConnectFourBoard() {
       }
     }
     setWin(isWin());
+    if (findTie()) {
+      setTie(true);
+    }
   }, [board, dropping, win, tie]);
 
   function createDropButtons() {
@@ -421,9 +411,7 @@ export default function ConnectFourBoard() {
 
       {tie && (
         <>
-          <h1>
-            Tie Game!
-          </h1>
+          <h1>Tie Game!</h1>
           <button className="winButton" onClick={restartGame}>
             Play Again
           </button>
@@ -432,7 +420,6 @@ export default function ConnectFourBoard() {
           <br />
         </>
       )}
-
     </div>
   );
 }
