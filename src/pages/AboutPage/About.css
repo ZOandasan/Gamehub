@@ -1,0 +1,50 @@
+.about {
+    background-color: rgba(0, 75, 150, 0.2);
+    border: .3vmin solid rgb(0, 0, 0);
+    border-radius: 3%;
+    margin: 5vmin
+    }
+    
+    .about-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: rgba(0, 75, 150, 0.2);
+      margin: 5vmin;
+      border: .1vmin solid rgb(0, 0, 0);
+      border-radius: 3%;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    p {
+      margin: 5vmin;
+      background-color: rgb(220, 220, 230);
+      border: .1vmin solid rgb(0, 0, 0);
+      border-radius: 3%;
+      font-size: 2vmin;
+      padding: 5vmin;
+    }
+    
+    table {
+      margin: 5vmin;
+      background-color: rgb(254, 251, 243);
+      padding: 10vmin;
+      border: .1vmin solid rgb(0, 0, 0);
+      border-radius: 3%;
+    }
+    
+    th {
+      text-decoration: underline;
+    }
+    
+    .name {
+      font-size: 2vmin
+    }
+    
+    .img {
+      height: 2vmin;
+      width: 2vmin;  
+    }

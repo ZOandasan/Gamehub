@@ -9,7 +9,7 @@ import SettingsPage from '../SettingsPage/SettingsPage';
 import NavBar from '../../components/NavBar/NavBar';
 
 import Blackjack from '../BlackJack/BlackJack';
-import ConnectFour from '../ConnectFour/ConnectFour';
+import ConnectFour from '../ConnectFour/Component/ConnectFour';
 import Simon from '../Simon/Simon';
 import TicTacToe from '../TicTacToe/TicTacToe';
 import War from '../War/War';
