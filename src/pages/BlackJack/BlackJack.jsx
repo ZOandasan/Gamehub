@@ -1,4 +1,4 @@
-
+import '../../CardCSS/css/cardstarter.min.css'
 import { useState } from "react";
 import WinLoss from "./Win-Loss/Win-Loss";
 import Header from "./Header/Header";

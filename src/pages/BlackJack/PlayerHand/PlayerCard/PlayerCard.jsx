@@ -1,9 +1,10 @@
 export default function PlayerCard({ card }) {
-    return (
-      <span>
-        {card.face}
-        <br />
-      </span>
-    );
-  }
+  let renderedCard = <div className={`card ${card.face}`}></div>
+
+  return (
+    <span>
+      {renderedCard}
+    </span>
+  );
+}
   
