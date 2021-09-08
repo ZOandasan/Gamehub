@@ -70,6 +70,7 @@ export default function ConnectFourBoard() {
 
   function restartGame() {
     setTie(null);
+    turnsTaken = 0;
     getScore();
     setCurrentPlayer(getFirstPlayerTurn());
     setWin(null);
@@ -196,7 +197,7 @@ export default function ConnectFourBoard() {
     function findTie() {
       if (turnsTaken === maxTurns) {
         //at this exact moment I need to render a message that says "It's a tie!" and the reset button
-        turnsTaken = 40;
+        turnsTaken = 0;
         console.log("Tie found");
         return true;
       } else {
