@@ -1,6 +1,6 @@
 .about {
-    background-color: rgba(0, 75, 150, 0.2);
-    border: .3vmin solid rgb(0, 0, 0);
+    background-color: var(--background);
+    border: .3vmin solid var(--border);
     border-radius: 3%;
     margin: 5vmin
     }
@@ -9,9 +9,9 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      background-color: rgba(0, 75, 150, 0.2);
+      background-color: var(--background-card);
       margin: 5vmin;
-      border: .1vmin solid rgb(0, 0, 0);
+      border: .1vmin solid var(--border);
       border-radius: 3%;
     }
     
@@ -21,8 +21,8 @@
     
     p {
       margin: 5vmin;
-      background-color: rgb(220, 220, 230);
-      border: .1vmin solid rgb(0, 0, 0);
+      background-color: var(--background-card);
+      border: .1vmin solid var(--border);
       border-radius: 3%;
       font-size: 2vmin;
       padding: 5vmin;
@@ -30,9 +30,9 @@
     
     table {
       margin: 5vmin;
-      background-color: rgb(254, 251, 243);
+      background-color: var(--background);
       padding: 10vmin;
-      border: .1vmin solid rgb(0, 0, 0);
+      border: .1vmin solid var(--border);
       border-radius: 3%;
     }
     
