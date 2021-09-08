@@ -30,9 +30,9 @@ export default function SettingsPage(){
 
     function setSEITheme(){
         document.documentElement.style.setProperty('--background', 'rgb(250, 250, 250)');
-        document.documentElement.style.setProperty('--background-form', '#fecb65');
-        document.documentElement.style.setProperty('--background-title', '#97cdb4');
-        document.documentElement.style.setProperty('--background-card', '#ffecaf');
+        document.documentElement.style.setProperty('--background-form', '#ffecaf');
+        document.documentElement.style.setProperty('--background-title', '#fecb65');
+        document.documentElement.style.setProperty('--background-card', '#97cdb4');
         document.documentElement.style.setProperty('--button', '#99ec65');
         document.documentElement.style.setProperty('--button-hover', '#99ee99');
         document.documentElement.style.setProperty('--header-text', 'rgb(0, 0, 0)');
