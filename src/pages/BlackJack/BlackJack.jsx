@@ -168,8 +168,7 @@ export default function Blackjack() {
       <Header />
       <WinLoss playerWins={playerWins} dealerWins={dealerWins} />
       <GameText play={play} bet={bet} />
-      <DealerHand dealerHand={dealerHand} bet={bet} dealerTotal={dealerTotal} />
-      <br />
+      <DealerHand dealerHand={dealerHand} bet={bet} dealerTotal={dealerTotal} play={play}/>
       <PlayerHand playerHand={playerHand} bet={bet} playerTotal={playerTotal} />
       <ButtonControl
         resetGame={resetGame}
