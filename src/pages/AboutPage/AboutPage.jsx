@@ -4,8 +4,9 @@ export default function AboutPage() {
   return (
     <div className="about">
       <h1>Meet the Team</h1>
-      <div className="about-container">
-        <p className="p-about">
+      <div>
+        <p className="aboutP">
+
           Originating from the same cohort in <b>General Assembly</b>'s Software
           Engineer Immersive, <u>Chris</u>, <u>Zach</u>, <u>Jeremy</u>, <u>Will</u>, <u>Andy</u> and <u>Liam</u> have all
           worked together extensively on projects ranging from Full Crud Game

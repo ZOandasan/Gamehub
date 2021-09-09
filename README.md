@@ -10,7 +10,7 @@
     A place to hangout and play some simple browser games to pass the time
     <br/>
     <br/>
-    <a href="https://github.com/ZOandasan/Gamehub">View Demo</a>
+    <a href="https://aleph-game-hub.herokuapp.com/games">Visit Site</a>
     .
     <a href="https://github.com/ZOandasan/Gamehub/issues">Request Feature</a>
   </p>
@@ -30,7 +30,10 @@
 
 ![Screen Shot](https://th.bing.com/th/id/R.7a21ff4f9cce0eb438f44554c0b7cd84?rik=4XuFbQybazup%2fg&pid=ImgRaw&r=0)
 
-- Gamehub is a simple website with browser game that you can play alone or with your friends.
+Gamehub is a simple website with browser game that you can play alone or with your friends.
+
+View our Trello board for more information on our planning and development process.
+https://trello.com/b/gt4rCqly/group-game-hub
 
 ## Built With
 
@@ -57,6 +60,11 @@ Distributed under the MIT License. See [LICENSE](https://github.com/ZOandasan/Ga
 
 ## Authors
 
-* **Zach** - [Zach](https://github.com/ZOandasan/) - *Built Framework / Jotto / Tic-Tac-Toe / Blackjack*
-* **Chris** - [Chris](https://github.com/countchrisdo/) - *Styling / Connect Four*
-* **Jeremy**  - [Jeremy](https://github.com/jhotz2112/) - *Connect Four*
+* [Zachary Oandasan](https://github.com/ZOandasan/) - *Framework / Styling / Jotto / Tic-Tac-Toe / Blackjack*
+* [Christopher Burwell](https://github.com/countchrisdo/) - *Styling / Jotto /Connect Four*
+* [Jeremy Young-Hotz](https://github.com/jhotz2112/) - *Styling / Connect Four*
+* [Liam Mess](https://github.com/wolflord480) - *Styling*
+* [Andy Li](https://github.com/sunsetdee) - *Blackjack*
+
+<!-- * [William Stull](https://github.com/stulldude/) - *Simon* -->
+

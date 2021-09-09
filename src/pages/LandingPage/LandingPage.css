@@ -1,0 +1,42 @@
+.LandingPage {
+    margin-top: 0px;
+  }
+  
+  .landingTitles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Lora", serif;
+    color: #444;
+  }
+  
+  .landingTitleSm {
+    /* position: absolute; */
+    /* top: 15%; */
+    font-size: 20px;
+  }
+  
+  .landingTitleLg {
+    /* position: absolute; */
+    /* top: 15%; */
+    font-size: 100px;
+  }
+  
+.gamesUList{
+    font-family: "Lora", serif;
+    color: #444;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gamesUList li:hover {
+    color: blue;
+}
