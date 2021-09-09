@@ -6,7 +6,7 @@ import ConnectFourBoard from "./ConnectFourBoard";
 export default function ConnectFour(){
     return (
         <div className="ConnectFourApp">
-          <img
+          <img className="connectFourBannerIMG"
             alt="Connect 4"
             src="https://i2.wp.com/www.baytekent.com/wp-content/uploads/2017/06/connect4logo.png?fit=433%2C129&ssl=1"
           />
