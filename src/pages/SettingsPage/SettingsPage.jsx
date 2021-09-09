@@ -28,6 +28,20 @@ export default function SettingsPage(){
         document.documentElement.style.setProperty('--border', 'rgb(250, 250, 250)');
     }
 
+    function setSEITheme(){
+        document.documentElement.style.setProperty('--background', 'rgb(250, 250, 250)');
+        document.documentElement.style.setProperty('--background-form', '#ffecaf');
+        document.documentElement.style.setProperty('--background-title', '#fecb65');
+        document.documentElement.style.setProperty('--background-card', '#97cdb4');
+        document.documentElement.style.setProperty('--button', '#99ec65');
+        document.documentElement.style.setProperty('--button-hover', '#99ee99');
+        document.documentElement.style.setProperty('--header-text', 'rgb(0, 0, 0)');
+        document.documentElement.style.setProperty('--plain-text', 'rgb(0, 0, 0)');
+        document.documentElement.style.setProperty('--link', 'rgb(50, 0, 100)');
+        document.documentElement.style.setProperty('--link-visited', 'rgb(100, 0, 50)');
+        document.documentElement.style.setProperty('--border', 'rgb(0, 0, 0)');
+    }
+
 
     return (
     <div>
@@ -37,10 +51,10 @@ export default function SettingsPage(){
             <div>
                 <button onClick={() => setLight()}>Default Theme</button>
                 <button onClick={() => setDark()}>Dark Theme</button>
-                {/* <button>Alt Theme</button>
-                <button>Alt Theme 2</button>
-                <button>Default</button>
-                <button>Default</button> */}
+                <button onClick={() => setSEITheme()}>Cafe Theme</button>
+                {/*
+                <button onClick={() => setNewTheme()}>Alt Theme</button>
+                */}
             </div>
         </div>
     </div>

@@ -5,8 +5,10 @@ export default function PlayerHand({ playerHand, bet, playerTotal }) {
     const card = playerHand.map((c, idx) => <PlayerCard key={idx} card={c} />);
     return (
       <>
+        <hr />
         <>{card}</>
-        <div>{playerTotal}</div>
+        {/*<div>{playerTotal}</div>*/}
+        <br />
       </>
     );
   } else if (bet) {

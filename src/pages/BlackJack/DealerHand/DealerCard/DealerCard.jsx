@@ -1,7 +1,7 @@
-export default function DealerCard({ card, index}) {
+export default function DealerCard({ card, index, play}) {
   let renderedCard = <div className={`card ${card.face}`}></div>
 
-  if (!index){
+  if (!index && !play){
     return (
       <span>
         <div className="card back-blue"></div>
