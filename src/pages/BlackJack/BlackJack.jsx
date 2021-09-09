@@ -36,6 +36,7 @@ export default function Blackjack() {
   const [bet, setBet] = useState();
   const [playerHand, setPlayerHand] = useState();
   const [dealerHand, setDealerHand] = useState();
+  const [funds, setFunds] = useState(1000);
 
   function buildMasterDeck() {
     const deck = [];
@@ -139,6 +140,7 @@ export default function Blackjack() {
 
     function tieGame() {
       setPlay(2);
+      setFunds(funds + bet + bet)
     }
   }
 
@@ -168,8 +170,7 @@ export default function Blackjack() {
       <Header />
       <WinLoss playerWins={playerWins} dealerWins={dealerWins} />
       <GameText play={play} bet={bet} />
-      <DealerHand dealerHand={dealerHand} bet={bet} dealerTotal={dealerTotal} />
-      <br />
+      <DealerHand dealerHand={dealerHand} bet={bet} dealerTotal={dealerTotal} play={play}/>
       <PlayerHand playerHand={playerHand} bet={bet} playerTotal={playerTotal} />
       <ButtonControl
         resetGame={resetGame}
