@@ -5,9 +5,11 @@ export default function WordsList({
   secret,
   setSecret,
   guessWords,
-  setGuessWords
+  setGuessWords,
+  resetColors
 }) {
   function resetGame() {
+    resetColors();
     setSecret();
     setGuessWords([]);
   }
