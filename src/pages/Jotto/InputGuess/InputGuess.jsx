@@ -9,6 +9,7 @@ export default function InputGuess({
   setGuessWords
 }) {
   let letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+  let vowels = ['A', 'E', 'I', 'O', 'U', 'Y'];
 
   const [formData, setFormData] = useState();
 
@@ -40,15 +41,28 @@ export default function InputGuess({
   function checkWord(evt) {
     let newWord = evt.target.value;
     newWord = newWord.toUpperCase();
-    // Make Sure that all of the characters are letters.
+    // Make sure that the new Word is valid.
+    let hasVowel = false;
+    checkForVowel;
 
-    // Make sure that the new Word is in the dictionary.
-    if (true) {
+    if (hasVowel) {
       setGuessWords([...guessWords, newWord]);
       setFormData("");
+      if (newWord === secret) {
+        setPlay(false);
+      }
+    } else {
+      setFormData("");
     }
-    if (newWord === secret) {
-      setPlay(false);
+
+    function checkForVowel(){
+      let wordCheck = newWord;
+      wordCheck.split('');
+      for (let i = 0; wordCheck.length > i; ++i){
+        if (vowels.includes(wordCheck[i])){
+          hasVowel = true;
+        }
+      }
     }
   }
 
