@@ -8,6 +8,8 @@ export default function InputGuess({
   guessWords,
   setGuessWords
 }) {
+  let letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
   const [formData, setFormData] = useState();
 
   function handleSubmit(evt) {
@@ -16,7 +18,20 @@ export default function InputGuess({
 
   function handleChange(evt) {
     if (evt.target.value.length < 5) {
-      setFormData(evt.target.value);
+      //Check to see if there are any non-letter chars
+      let wordCheck = evt.target.value;
+      wordCheck = wordCheck.toLowerCase();
+      wordCheck = wordCheck.split('');
+      let save = true;
+      for (let i = 0; wordCheck.length > i; ++i){
+        if (!letters.includes(wordCheck[i])){
+          save = false;
+        }
+      }
+      //Set the data if there are none.
+      if (save){
+        setFormData(evt.target.value);
+      }
     } else {
       checkWord(evt);
     }
@@ -25,6 +40,8 @@ export default function InputGuess({
   function checkWord(evt) {
     let newWord = evt.target.value;
     newWord = newWord.toUpperCase();
+    // Make Sure that all of the characters are letters.
+
     // Make sure that the new Word is in the dictionary.
     if (true) {
       setGuessWords([...guessWords, newWord]);
