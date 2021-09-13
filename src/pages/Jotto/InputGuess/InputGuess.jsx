@@ -45,7 +45,7 @@ export default function InputGuess({
     let hasVowel = false;
     checkForVowel(hasVowel);
 
-    if (hasVowel) {
+    if (checkForVowel()) {
       setGuessWords([...guessWords, newWord]);
       setFormData("");
       if (newWord === secret) {
@@ -55,7 +55,8 @@ export default function InputGuess({
       setFormData("");
     }
 
-    function checkForVowel(hasVowel){
+    function checkForVowel(){
+      let hasVowel = false;
       let wordCheck = newWord;
       wordCheck.split('');
       for (let i = 0; wordCheck.length > i; ++i){
@@ -63,6 +64,7 @@ export default function InputGuess({
           hasVowel = true;
         }
       }
+      return hasVowel;
     }
   }
 
