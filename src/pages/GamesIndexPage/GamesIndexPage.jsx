@@ -9,7 +9,7 @@ export default function GamesIndexPage() {
   return (
     <>
       <div className="gamesIndexHeader">
-        <h1>Games Index Page</h1>
+        <h1>Games</h1>
       </div>
       <div className="gamesIndexCardDiv">
         <div className="gameIndexCard">
@@ -23,9 +23,10 @@ export default function GamesIndexPage() {
         <img src={ConnectFourimg}
         className="gameIndexImg" />
           <Link to="/connect-four">
-            <button className="gameLink">Play Connect Four</button>
+            <button className="gameLink">Play Connect 4</button>
           </Link>
         </div>
+
         {/* <span><Link to="/hangman"><button className="gameLink">Hangman</button></Link></span> */}
         <div className="gameIndexCard">
         <img src={Jottoimg}
