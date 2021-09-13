@@ -28,7 +28,7 @@
 
 ## About The Project
 
-![Screen Shot](https://th.bing.com/th/id/R.7a21ff4f9cce0eb438f44554c0b7cd84?rik=4XuFbQybazup%2fg&pid=ImgRaw&r=0)
+![Screen Shot](https://i.imgur.com/IswpWT9.png)
 
 Gamehub is a simple website with browser game that you can play alone or with your friends.
 
