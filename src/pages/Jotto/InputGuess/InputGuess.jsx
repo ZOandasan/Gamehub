@@ -43,7 +43,7 @@ export default function InputGuess({
     newWord = newWord.toUpperCase();
     // Make sure that the new Word is valid.
     let hasVowel = false;
-    checkForVowel;
+    checkForVowel(hasVowel);
 
     if (hasVowel) {
       setGuessWords([...guessWords, newWord]);
@@ -55,7 +55,7 @@ export default function InputGuess({
       setFormData("");
     }
 
-    function checkForVowel(){
+    function checkForVowel(hasVowel){
       let wordCheck = newWord;
       wordCheck.split('');
       for (let i = 0; wordCheck.length > i; ++i){
