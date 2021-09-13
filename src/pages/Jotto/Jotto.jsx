@@ -102,7 +102,7 @@ export default function Jotto() {
       <div className="jotto-game">
         <h1>Jotto</h1>
         {/* hide h4 during release */}
-        <h4 className="debug"> Debug Mode - Showing Secret: {secret}</h4>
+        {/*<h4 className="debug"> Debug Mode - Showing Secret: {secret}</h4>*/}
         <Alphabet play={play} letters={letters} setLetters={setLetters} resetColors={resetColors}/>
 
         <InputGuess
