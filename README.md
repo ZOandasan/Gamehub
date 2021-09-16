@@ -30,14 +30,22 @@
 
 ![Screen Shot](https://i.imgur.com/IswpWT9.png)
 
-Gamehub is a simple website with browser game that you can play alone or with your friends.
+Gamehub is a simple website with browser games that you can play alone or with your friends locally.
 
 View our Trello board for more information on our planning and development process.
 https://trello.com/b/gt4rCqly/group-game-hub
 
 ## Built With
 
-HTML, CSS, Javascript, MongoDB, Mongoose, Express, React.js, Node.js, Heroku
+- HTML
+- CSS 
+- Javascript 
+- MongoDB 
+- Mongoose
+- Express 
+- React.js 
+- Node.js 
+- Heroku
 
 ## Contributing
 
@@ -61,7 +69,7 @@ Distributed under the MIT License. See [LICENSE](https://github.com/ZOandasan/Ga
 ## Authors
 
 * [Zachary Oandasan](https://github.com/ZOandasan/) - *Framework / Styling / Jotto / Tic-Tac-Toe / Blackjack*
-* [Christopher Burwell](https://github.com/countchrisdo/) - *Styling / Jotto /Connect Four*
+* [Christopher Burwell](https://github.com/countchrisdo/) - *Styling / Jotto / Connect Four*
 * [Jeremy Young-Hotz](https://github.com/jhotz2112/) - *Styling / Connect Four*
 * [Liam Mess](https://github.com/wolflord480) - *Styling*
 * [Andy Li](https://github.com/sunsetdee) - *Blackjack*
