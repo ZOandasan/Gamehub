@@ -6,7 +6,7 @@ export default function SettingsPage(){
         document.documentElement.style.setProperty('--background-title', 'rgba(0, 75, 150, 0.2)');
         document.documentElement.style.setProperty('--background-card', 'rgb(220, 220, 230)');
         document.documentElement.style.setProperty('--button', 'rgba(50, 200, 210, 0.8)');
-        document.documentElement.style.setProperty('--button-hover', 'rgba(150, 200, 100)');
+        document.documentElement.style.setProperty('--button-hover', 'rgba(50, 200, 210)');
         document.documentElement.style.setProperty('--header-text', 'rgb(0, 0, 0)');
         document.documentElement.style.setProperty('--plain-text', 'rgb(0, 0, 0)');
         document.documentElement.style.setProperty('--link', 'rgb(50, 0, 100)');
